@@ -49,7 +49,7 @@ $(document).ready(function () {
             }
         },
         plugins: [
-            'search', 'state', 'types', 'sort',
+            'search', /*'state',*/ 'types', 'sort',
             'wholerow', 'dnd', 'massload',
         ]
     }).on('changed.jstree', function (e, data) {
