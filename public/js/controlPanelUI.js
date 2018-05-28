@@ -248,7 +248,6 @@ $(document).ready(function () {
         columns: [
             {
                 data: 'id',
-                //orderable: false,
             },
             {data: 'parent'},
             {data: 'first_name'},

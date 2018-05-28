@@ -351,12 +351,6 @@ class ControlPanelController extends Controller
 
                 ]
             ],
-            'options' => [
-                'columnDefs' => [
-                    'orderable' => false,
-                    'targets' => 0,
-                ]
-            ]
         ];
 
         foreach ($data as $rec) {
