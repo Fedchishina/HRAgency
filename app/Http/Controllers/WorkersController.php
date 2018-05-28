@@ -41,30 +41,6 @@ class WorkersController extends Controller
         return response()->json($result);
     }
 
-    public function moveItem(Request $r)
-    {
-        $id = $r->input('id');
-        $parent = $r->input('parent');
-
-        $rec = Person::find($id);
-
-        if ($rec) {
-            $pRec = Person::find($parent);
-
-            if ($pRec) {
-                $pRec->children = true;
-                $pRec->save();
-            }
-
-            $rec->parent = $parent;
-            $rec->save();
-
-            $resp['status'] = 'success';
-
-            return response()->json($resp, 200);
-        }
-    }
-
     public function searchIDsRecursive($items)
     {
         foreach ($items as $item) {

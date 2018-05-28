@@ -17,7 +17,7 @@ Route::prefix('workers')->group(function (){
     Route::post('mass', ['as' => 'workers-mass', 'uses' => 'WorkersController@getMass']);
 
     Route::get('search', ['as' => 'workers-search', 'uses' => 'WorkersController@searchItems']);
-    Route::get('move', ['as' => 'workers-move', 'uses' => 'WorkersController@moveItem']);
+    Route::get('move', ['as' => 'workers-move', 'uses' => 'ControlPanelController@moveItem']);
 });
 
 Route::get('/contacts', ['as' => 'contacts', 'uses' => 'ContactsController@show']);

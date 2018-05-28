@@ -367,6 +367,37 @@ class ControlPanelController extends Controller
         return response()->json($result);
     }
 
+
+    /**
+     * Move worker in tree on Workers page
+     * @param Request $r
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function moveItem(Request $r)
+    {
+        $id = $r->input('id');
+        $parent = $r->input('parent');
+
+        $rec = Person::find($id);
+
+        if ($rec) {
+            $pRec = Person::find($parent);
+
+            if ($pRec) {
+                $pRec->children = true;
+                $pRec->save();
+            }
+
+            $rec->parent = $parent;
+            $rec->save();
+
+            $resp['status'] = 'success';
+
+            return response()->json($resp, 200);
+        }
+    }
+
+
     /**
      *  Actions for workers datatable and
      * return AJAX request status

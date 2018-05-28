@@ -21,9 +21,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone:</label>
-                                <input type="tel" class="form-control" id="phone" value="{{ old('phone') }}"
-                                       name="phone"
-                                       placeholder="Enter your phone number">
+                                <div class="form-row">
+                                    <div class="col">
+                                        <input type="tel" class="form-control" id="phone" value="{{ old('phone') }}"
+                                               name="phone" placeholder="Enter your phone number">
+                                    </div>
+                                    <div class="col-auto">
+                                        <a href="#" class="btn btn-info" data-toggle="tooltip" title="3805012345678">?</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="text">Text:</label>
@@ -67,7 +73,7 @@
         <hr>
     </div>
 
-    <script src="js/googleMap.js"></script>
+    <script src="{{ asset('js/googleMap.js') }}"></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNzqX8h6j0H1KRZM7U38E2edzvNARxAZ4&callback=myMap"></script>
 

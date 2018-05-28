@@ -11,13 +11,14 @@
     <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
 
     <title>HR Agency</title>
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/myStyle.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/jstree/style.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/myStyle.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('css/jstree/style.min.css') }}"/>
 
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <script src="{{ asset('js/jstree.min.js') }}"></script>
     <script src="{{ asset('js/notify.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
 </head>
 
 <body>
@@ -68,7 +69,8 @@
                 @guest
                     <ul class="navbar-nav nav justify-content-end">
                         <li class="nav-item mr-1"><a class="nav-link btn btn-light my-2 my-sm-0 text-dark"
-                                                     href="#" data-toggle="modal" data-target="#myModal">Sign in</a></li>
+                                                     href="#" data-toggle="modal" data-target="#myModal">Sign in</a>
+                        </li>
                     </ul>
                 @else
                     <ul class="navbar-nav nav justify-content-end">
@@ -169,8 +171,8 @@
 @show
 
 <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('js/popper.min.js') }}"></script>
 <script src="{{ asset('js/bootstrap-treeview.min.js') }}"></script>
+<script src="{{ asset('js/layout.js') }}"></script>
 
 </body>
 </html>

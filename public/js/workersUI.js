@@ -67,6 +67,12 @@ $(document).ready(function () {
             data: {
                 id: data.node.id,
                 parent: data.parent,
+            },
+            success: function () {
+                showModalNotify(0, 'Item moved success!');
+            },
+            error: function (jqXHR, exception) {
+                showModalNotify(1, 'For this action you need to be authorized! Error code: ' + jqXHR.status);
             }
         });
     });
