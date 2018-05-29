@@ -17,5 +17,7 @@ class UsersSeeder extends Seeder
             'email' => 'admin@hragency.com',
             'password' => bcrypt('admin'),
         ]);
+
+        $this->command->info('Users table seeded!');
     }
 }

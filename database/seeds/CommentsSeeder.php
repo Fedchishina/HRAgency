@@ -13,13 +13,8 @@ class CommentsSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 0; $i < 25; $i++){
-            $c = new Comment;
-            $c->name = RandomData::getFirstName();
-            $c->email = $c->name . '@mail.com';
-            $c->comment = RandomData::getRandomComment();
-            $c->moderated = rand(0,1);
-            $c->save();
-        }
+        factory(App\Comment::class, 50)->create();
+
+        $this->command->info('Comments table seeded!');
     }
 }

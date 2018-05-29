@@ -18,7 +18,7 @@ class CreateContactUsTable extends Migration
             $table->boolean('complete')->default(false);
             $table->char('name', 32);
             $table->char('email', 32);
-            $table->char('phone', 16);
+            $table->char('phone', 24);
             $table->string('text');
             $table->timestamps();
             $table->softDeletes();

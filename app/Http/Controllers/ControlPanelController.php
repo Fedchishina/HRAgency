@@ -335,8 +335,11 @@ class ControlPanelController extends Controller
             $recordsFiltered = Person::join('persons_info', 'persons_info.person_id', '=', 'persons.id')
                 ->join('salary', 'salary.id', '=', 'persons.salary_id')
                 ->select(DB::raw('persons.id'))
-                ->where('first_name', 'LIKE', "%{$search}%")
+                ->where('persons.id', "{$search}")
+                ->orWhere('first_name', 'LIKE', "%{$search}%")
                 ->orWhere('last_name', 'LIKE', "%{$search}%")
+                ->orWhere('salary', 'LIKE', "%{$search}%")
+                ->orWhere('position', 'LIKE', "%{$search}%")
                 ->get()
                 ->count();
         }

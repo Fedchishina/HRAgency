@@ -7,7 +7,7 @@ use App\Classes\RandomData;
 
 class PersonsSeeder extends Seeder
 {
-    private function insertRecord($pId, $child = true){
+   /* private function insertRecord($pId, $child = true){
         $rec = new Person;
         $rec->parent = $pId;
         $rec->salary_id = rand(1,100);
@@ -19,11 +19,16 @@ class PersonsSeeder extends Seeder
         $rec->save();
         $rec->persons_info()->save($recInfo);
         return $rec->id;
-    }
+    }*/
 
     public function run()
     {
-        $date = new DateTime();
+
+
+        /*$date = new DateTime();
+
+        $this->command->info('Таблица пользователей заполнена данными!');
+
         echo 'Start seeding time: ';
         echo $date->format('Y-m-d H:i:s') . "\n";
         $rc = 0;
@@ -58,6 +63,6 @@ class PersonsSeeder extends Seeder
         $date = new DateTime();
         echo 'End seeding time:';
         echo $date->format('Y-m-d H:i:s') . "\n";
-        echo "Added records: " . $rc . "\n";
+        echo "Added records: " . $rc . "\n";*/
     }
 }
