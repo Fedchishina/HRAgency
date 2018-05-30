@@ -23,5 +23,6 @@ class ImagesSeeder extends Seeder
             $rec->save();
         }
 
+        $this->command->info('Images table seeded!');
     }
 }

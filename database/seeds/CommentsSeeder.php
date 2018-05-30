@@ -9,6 +9,7 @@ class CommentsSeeder extends Seeder
      *
      * @return void
      */
+
     public function run()
     {
         factory(App\Comment::class, 50)->create();
