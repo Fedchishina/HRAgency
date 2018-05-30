@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Comment;
-use App\Classes\RandomData;
 
 class CommentsSeeder extends Seeder
 {
