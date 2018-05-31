@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card sticky-top sticky-offset mb-2" style="width: 100%">
-                    <img class="card-img-top" src="img\content\profile-photo.jpg" alt="Profile photo"
+                    <img class="card-img-top" src="{{ asset('img\content\profile-photo.jpg') }}" alt="Profile photo"
                          style="width:100%">
                     <div class="card-body">
                         <h4 class="card-title">Sviatoslav Voitenko</h4>
@@ -74,9 +74,10 @@
                             <address><strong>Facebook:</strong><a
                                         href="{{ route('redirect',['where' => 'facebook']) }}"> Sviatoslav Voitenko</a>
                             </address>
-                            <address><strong>Phone Number (MTC & Viber):</strong> +38 (050) 7210172</address>
-                            <address><strong>Phone Number (Pheonix):</strong> +38 (071) 4271143</address>
-                            <address><strong>Email:</strong><a href="mailto:sviatoslav.voitenko@gmail.com">
+                            <address><strong>Phone Number (Vodafone & Viber): </strong>+38 (050) 72-101-72</address>
+                            <address><strong>Phone Number (Pheonix): </strong>+38 (071) 427-11-43</address>
+                            <address><strong>Skype: </strong>By Vodafone phone number or e-mail</address>
+                            <address><strong>Email: </strong><a href="mailto:sviatoslav.voitenko@gmail.com">
                                     sviatoslav.voitenko@gmail.com</a></address>
                         </div>
                     </div>
