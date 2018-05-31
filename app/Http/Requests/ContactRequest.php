@@ -26,8 +26,8 @@ class ContactRequest extends FormRequest
         return [
             'name' => 'required|min:2',
             'email' => 'required|email',
-            'phone' => 'required|numeric|min:11',
-            'text' => 'required|min:10'
+            'phone' => 'required|min:9|regex:/^[A-ZÀÂÇÉÈÊËÎÏÔÛÙÜŸÑÆŒa-zàâçéèêëîïôûùüÿñæœ0-9_.,() ]+$/',
+            'text' => 'required|min:10',
         ];
     }
 }

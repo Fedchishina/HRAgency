@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <link rel="stylesheet" type="text/css" href="{{ asset("js/datatables.css") }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset("js/datatables.min.css") }}"/>
 
     <script type="text/javascript">
         var lazyRouteURIComments = "{{ route('comments-lazy') }}",
@@ -177,7 +177,7 @@
     </div>
 
     <script type="text/javascript" src="{{ asset("js/controlPanelUI.js") }}"></script>
-    <script type="text/javascript" src="{{ asset("js/datatables.js") }}"></script>
+    <script type="text/javascript" src="{{ asset("js/datatables.min.js") }}"></script>
 @endsection
 
 @section('content-footer')

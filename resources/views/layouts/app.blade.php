@@ -34,8 +34,10 @@
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav mr-auto">
 
-                    <li class="nav-item mr-1 active"><a class="nav-link btn btn-danger my-2 my-sm-0"
-                                                        href="{{ route('home') }}">Home</a></li>
+                    <li class="nav-item mr-1 active">
+                        <a class="nav-link btn btn-danger my-2 my-sm-0" href="{{ route('home') }}">
+                            <img src="{{ asset('svg/si-glyph-house.svg') }}" width="24px">Home
+                        </a></li>
 
                     <li class="nav-item dropdown mr-1 ">
                         <a class="nav-link dropdown-toggle btn btn-primary my-2 my-sm-0 text-light" href="#"
