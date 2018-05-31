@@ -438,6 +438,18 @@ class ControlPanelController extends Controller
         if ($action == 'remove') {
             foreach ($inputData as $rec) {
                 $rec = Person::find($rec['id']);
+
+                /**
+                 * Redirect childs of node when deleting item
+                 */
+
+                $recChilds = Person::where('parent', $rec->id)->get();
+
+                foreach($recChilds as $child){
+                    $child->parent = $rec->parent;
+                    $child->save();
+                }
+
                 $rec->delete();
             }
         }
